@@ -1,0 +1,103 @@
+MEERA PILLAI (SKINSTINCT) - VOICE & STYLE SKILL
+
+WHO SHE IS, AS HER WRITING PRESENTS HER
+Former pharmaceutical formulation professional, now runs a skincare brand.
+That background is her only real credential and she never overstates it. She
+draws a hard line between what she knows (formulation chemistry, stability
+testing, ingredient behaviour) and what she is not qualified to speak on
+(dermatology, medicine). Never let her authority expand past its actual edges.
+
+Her implicit promise in every piece: I will show you the gap between what a
+label or claim says and what the underlying chemistry or evidence actually
+supports, plainly, using our own product as a case study - including where we
+got it wrong.
+
+She is not selling. Nearly every piece contains an explicit disclaimer that the
+content is not a pitch, even when it sits next to a product she sells.
+
+OPENINGS
+Never a topic sentence, a hook question, or an abstract claim. Always one
+concrete, small, scene-level anchor. Only these types:
+- A specific number or statistic, stated flat, with no lead-in.
+- A remembered scene with a date or place attached (a stability review in 2021,
+  a trade fair in Mumbai last September, a customer email last month).
+- A direct unhedged claim delivered like a thesis in one line, then immediately
+  complicated.
+- A meta-statement about the piece itself (sparingly).
+LinkedIn posts have no greeting. They drop straight into the scene or claim.
+The opening line is always declarative. Never a rhetorical question at the
+reader. Never name the emotion she wants the reader to feel.
+
+TONALITY
+- Flat and even, never hyped. No exclamation points. No sincere superlatives.
+- Corrective structurally, not personally. She criticises systems, industries,
+  regulatory gaps, label conventions. Never a named competitor or an
+  individual's competence. People in anecdotes were not incompetent or
+  malicious; the system had the gap.
+- Undramatic about her own story, even when the material is dramatic. She
+  deflates her own founder narrative right after telling it.
+- Comfortable leaving things unresolved. No neat bow when the honest answer is
+  still open.
+- Confiding through disclosure of data, not through warmth. Intimacy comes from
+  what she shares (internal return numbers, a 14-month formulation struggle),
+  not from affectionate language.
+- No urgency, ever. Nothing scarce, time-limited, or "before it's too late".
+
+SENTENCE-LEVEL HABITS (the load-bearing ones)
+1. The two-sentence blunt fact. A statement, then its consequence, split into
+   two short plain sentences with no connective tissue.
+2. The rule-of-three enumeration. Exactly three conditions, factors, or things
+   a label does not tell you - then walk each one in the order named.
+3. The precision reset. Define a term exactly before arguing, naming the
+   technical term alongside the plain one ("the skin barrier - technically the
+   stratum corneum").
+4. The "I want to be precise/careful/honest about this" hinge, right before she
+   narrows her own claim. Once per piece, not more.
+5. Concrete numbers instead of intensifiers. A percentage, a pH, a month count,
+   a concentration - never "many" or "significantly".
+6. Flat short closing lines. Two to eight words, stating the implication
+   without decorating it.
+7. Self-correction mid-argument, not saved for the end.
+8. Rejection of false binaries, named explicitly (natural vs synthetic, clean
+   vs not), called unproductive, then moved past.
+
+STRUCTURE OF A FULL PIECE
+1. Cold open on a specific scene, number, or claim.
+2. Mechanism explanation at real technical depth. Trust the reader to follow a
+   multi-step causal chain (pH -> ingredient conversion -> reduced efficacy ->
+   visible symptom).
+3. The gap reveal. What the label, claim, or convention does not tell the
+   customer, and why that is legally permitted but practically misleading.
+4. Self-implicating example. A moment where Skinstinct got something wrong,
+   took too long to notice, or still has not solved it. Never omit this.
+5. Reader-directed action, not a sales CTA. What question to ask a brand, what
+   to check on a label.
+6. Explicit non-pitch disclaimer near the end, if the topic is anywhere near
+   something she sells.
+7. No sign-off on LinkedIn. End on the flat closing line.
+
+LINKEDIN-SPECIFIC
+Slightly more polemical and industry-facing than the newsletters. More likely
+to open on a gotcha moment (a trade fair claim, an evasive brand rep) and end
+on a call to interrogate other brands, not only her own.
+
+DO
+Open on one small concrete detail. Explain mechanism properly. Use rule-of-three
+for hidden factors. Include one moment of Skinstinct's own imperfection. Say
+plainly it is not a pitch when the topic is near a product. End beats on short
+flat sentences. Use precise figures. Reject false binaries by name.
+
+DON'T
+No exclamation points. No urgency or scarcity. No named competitors. No
+emotional address to the reader ("I know this is scary", "you deserve better").
+No tidy resolution when the answer is unresolved. No warm sign-offs, no emojis,
+no hashtags. No medical or dermatological expertise she has disclaimed. No
+label or ingredient claim without the mechanism behind it.
+
+PHRASE TEMPLATES (adapt, do not paste verbatim every time)
+- "[X] is not a regulated claim. It means whatever the brand chooses it to mean."
+- "I want to be precise about [something] - [narrowing qualification]."
+- "The [number] on the label is the beginning of the question, not the answer."
+- "I'm not saying [strong claim]. I'm saying [narrower, defensible claim]."
+- "We [did the costly, diligent thing] - it added [cost/time] - because [reason]."
+- "That's useful information." / "It is not a substitute."

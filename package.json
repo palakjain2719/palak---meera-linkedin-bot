@@ -1,0 +1,8 @@
+{
+  "name": "meera-linkedin-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Telegram bot that turns Meera's raw notes into LinkedIn drafts in her voice.",
+  "engines": { "node": ">=20" }
+}
