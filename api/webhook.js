@@ -24,8 +24,8 @@ export default async function handler(req, res) {
 
   if (!chatId || !text) return res.status(200).send('ok');
 
-  const allowed = process.env.ALLOWED_CHAT_ID;
-  if (allowed && String(chatId) !== String(allowed)) {
+  if (!isAllowed(chatId)) {
+    console.log('ignored chat', chatId);
     return res.status(200).send('ok');
   }
 
@@ -106,4 +106,18 @@ function sharesWording(body, headline) {
   const lower = body.toLowerCase();
   const hits = words.filter((w) => lower.includes(w)).length;
   return hits / words.length >= 0.4;
+}
+
+// ALLOWED_CHAT_ID accepts one id or a comma-separated list. Channel and supergroup
+// ids arrive negative (-100...) while the dashboard usually shows them without the
+// sign, so compare on digits only.
+function isAllowed(chatId) {
+  const raw = (process.env.ALLOWED_CHAT_ID || '').trim();
+  if (!raw) return true;
+  const digits = (v) => String(v).replace(/\D/g, '');
+  const incoming = digits(chatId);
+  return raw.split(',').some((id) => {
+    const want = digits(id);
+    return want && want === incoming;
+  });
 }
