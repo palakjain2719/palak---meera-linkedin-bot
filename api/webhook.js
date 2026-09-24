@@ -1,8 +1,8 @@
-import { sendMessage, sendTyping } from '../lib/telegram.js';
-import { screen, newsAngle, draft, verifyBlock } from '../lib/pipeline.js';
+import { sendMessage, sendTyping, downloadFile } from '../lib/telegram.js';
+import { transcribe, screen, newsAngle, draft, verifyBlock } from '../lib/pipeline.js';
 import { saveNote, saveDraft, resolveLatestDraft, storeEnabled } from '../lib/store.js';
 
-const HELP = `Send me a note. A line, a half-thought, whatever you were going to voice-note.
+const HELP = `Send me a note. Type it, or just record a voice message - I transcribe those.
 
 I screen it first. If there is a post in it, I write the draft in your voice and send it back. If there isn't, I tell you why and stop.
 
@@ -20,9 +20,10 @@ export default async function handler(req, res) {
   const update = req.body || {};
   const msg = update.message || update.channel_post || update.edited_message;
   const chatId = msg?.chat?.id;
+  const audio = msg?.voice || msg?.audio || msg?.video_note;
   const text = (msg?.text || msg?.caption || '').trim();
 
-  if (!chatId || !text) return res.status(200).send('ok');
+  if (!chatId || (!text && !audio)) return res.status(200).send('ok');
 
   if (!isAllowed(chatId)) {
     console.log('ignored chat', chatId);
@@ -30,7 +31,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    await run(chatId, text, msg);
+    await run(chatId, text, msg, audio);
   } catch (err) {
     console.error(err);
     await sendMessage(chatId, `Something broke before a draft was made.\n\n${err.message}`).catch(() => {});
@@ -39,7 +40,19 @@ export default async function handler(req, res) {
   return res.status(200).send('ok');
 }
 
-async function run(chatId, text, msg) {
+async function run(chatId, text, msg, audio) {
+  // A voice note becomes text first, then goes through the same pipeline.
+  if (audio) {
+    await sendTyping(chatId);
+    const buffer = await downloadFile(audio.file_id);
+    text = await transcribe(buffer, audio.mime_type || 'audio/ogg');
+
+    if (!text || text.length < 15) {
+      return sendMessage(chatId, 'I could not make out enough of that to work with. Try again, or type it.');
+    }
+    await sendMessage(chatId, `Heard:\n\n"${text}"`);
+  }
+
   if (/^\/(start|help)\b/i.test(text)) {
     return sendMessage(chatId, HELP);
   }

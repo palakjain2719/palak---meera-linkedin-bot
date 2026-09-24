@@ -4,7 +4,9 @@ Telegram in, LinkedIn draft out. No web app, no auto-publishing.
 
 ## Flow
 
-1. Meera sends a note to the bot on Telegram.
+0. If she sends a voice note, Gemini transcribes it first and the bot echoes back
+   what it heard, so a mis-hearing is visible before anything is written.
+1. Meera sends a note to the bot on Telegram - typed or spoken.
 2. Gemini scores it 0–10 against what she actually writes about. Below 6, the bot
    replies with the reason and stops.
 3. Gemini pulls a search phrase; Google News RSS returns the top item from the
@@ -20,10 +22,10 @@ Telegram in, LinkedIn draft out. No web app, no auto-publishing.
 | File | What it does |
 | --- | --- |
 | `api/webhook.js` | The Telegram webhook. The whole flow lives here. |
-| `lib/pipeline.js` | Screening, news angle, drafting, the sanitizer, the verify block. |
+| `lib/pipeline.js` | Transcription, screening, news angle, drafting, the sanitizer, the verify block. |
 | `lib/gemini.js` | Gemini API call. |
 | `lib/news.js` | Google News RSS. No key needed. |
-| `lib/telegram.js` | sendMessage / typing indicator. |
+| `lib/telegram.js` | sendMessage, typing indicator, voice-note download. |
 | `lib/store.js` | Optional Supabase memory. No-ops when unconfigured. |
 | `voice-skill.txt` | The voice constraint. Edit this to change how she sounds. |
 
